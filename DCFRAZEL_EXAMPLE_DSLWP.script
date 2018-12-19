@@ -233,23 +233,6 @@ GMAT PI9CAM.Pressure = 1013.5;
 GMAT PI9CAM.Humidity = 55;
 GMAT PI9CAM.MinimumElevationAngle = 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 %----------------------------------------
 %---------- ForceModels
 %----------------------------------------
