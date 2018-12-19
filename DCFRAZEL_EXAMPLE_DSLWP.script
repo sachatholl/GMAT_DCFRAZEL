@@ -944,10 +944,7 @@ While DSLWP_B.ElapsedDays <= A_Input_SimDuration
          Toggle EarthGroundTrack LunaGroundTrack On;
       EndIf;
       
-      % Uncomment these few lines of the If-clause and update the start ans stop modified Julian times if you want to show a particular event
-      GMAT A_SpecialEventStart = 28460.87500000002; % in UTC ModJulian
-      GMAT A_SpecialEventStop = 28462.20833333339; % in UTC ModJulian
-      
+      % Uncomment these few lines of the If-clause and update the start ans stop modified Julian times if you want to show a particular event     
       %-----------------------------------------------------------------------------------------  
       %If DSLWP_B.UTCModJulian >= 28460.87500000002 & DSLWP_B.UTCModJulian <= 28462.20833333339
       %   Toggle XYPlot UpLinkPlot DownLinkPlot XYPlot ElevationPlot On;
