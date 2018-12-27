@@ -75,10 +75,10 @@ BeginMissionSequence;
 	GMAT FrequencyDown = SCFrqDown;
 	GMAT FrequencyUp = SCFrqUp;
 	GMAT DopplerShiftDown = (FrequencyDown * dRange_over_dTime) / SpeedOfLight;
-	GMAT DownLinkFrequency = FrequencyDown - DopplerShiftDown;
+	GMAT DownLinkFrequency = FrequencyDown + DopplerShiftDown;
 
 	GMAT DopplerShiftUp = (FrequencyUp * dRange_over_dTime) / SpeedOfLight;
-	GMAT UpLinkFrequency = FrequencyUp + DopplerShiftUp;
+	GMAT UpLinkFrequency = FrequencyUp - DopplerShiftUp;
 
 	%----------- Elevation calculation -----------------------
 
