@@ -1,5 +1,5 @@
 %General Mission Analysis Tool(GMAT) Script
-%Created: 2018-12-28 14:29:34
+%Created: 2018-12-31 02:38:48
 
 
 %----------------------------------------
@@ -13,15 +13,15 @@
 
 Create Spacecraft JAS_2__FO_29_;
 GMAT JAS_2__FO_29_.DateFormat = UTCModJulian;
-GMAT JAS_2__FO_29_.Epoch = '28478.2455550502';
+GMAT JAS_2__FO_29_.Epoch = '28476.3970067198';
 GMAT JAS_2__FO_29_.CoordinateSystem = EarthMJ2000Eq;
 GMAT JAS_2__FO_29_.DisplayStateType = Keplerian;
-GMAT JAS_2__FO_29_.SMA = 7445.376643227491;
-GMAT JAS_2__FO_29_.ECC = 0.03497609708811472;
-GMAT JAS_2__FO_29_.INC = 98.508677080461;
-GMAT JAS_2__FO_29_.RAAN = 172.096600003695;
-GMAT JAS_2__FO_29_.AOP = 335.7884346107212;
-GMAT JAS_2__FO_29_.TA = 24.21154454542498;
+GMAT JAS_2__FO_29_.SMA = 7445.390551474473;
+GMAT JAS_2__FO_29_.ECC = 0.03507546817256531;
+GMAT JAS_2__FO_29_.INC = 98.5086770206869;
+GMAT JAS_2__FO_29_.RAAN = 170.502599992108;
+GMAT JAS_2__FO_29_.AOP = 340.5877391163221;
+GMAT JAS_2__FO_29_.TA = 19.41230540852906;
 GMAT JAS_2__FO_29_.DryMass = 50;
 GMAT JAS_2__FO_29_.Cd = 2.2;
 GMAT JAS_2__FO_29_.Cr = 1.8;
@@ -230,6 +230,8 @@ GMAT PI9CAM.MinimumElevationAngle = 0;
 
 
 
+
+
 %----------------------------------------
 %---------- ForceModels
 %----------------------------------------
@@ -355,9 +357,9 @@ GMAT EclipseLocator_JAS_2__FO_29_.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra
 
 Create OrbitView OrbitVIEW_ECEF;
 GMAT OrbitVIEW_ECEF.SolverIterations = Current;
-GMAT OrbitVIEW_ECEF.UpperLeft = [ 0.4980314960629921 0.6614583333333334 ];
-GMAT OrbitVIEW_ECEF.Size = [ 0.4986876640419948 0.33125 ];
-GMAT OrbitVIEW_ECEF.RelativeZOrder = 305;
+GMAT OrbitVIEW_ECEF.UpperLeft = [ 0.4270588235294118 0.6375 ];
+GMAT OrbitVIEW_ECEF.Size = [ 0.4282352941176471 0.3204545454545454 ];
+GMAT OrbitVIEW_ECEF.RelativeZOrder = 106;
 GMAT OrbitVIEW_ECEF.Maximized = false;
 GMAT OrbitVIEW_ECEF.Add = {JAS_2__FO_29_, Earth, Sun};
 GMAT OrbitVIEW_ECEF.CoordinateSystem = EarthFixed;
@@ -387,9 +389,9 @@ GMAT OrbitVIEW_ECEF.EnableConstellations = Off;
 
 Create OrbitView SatVIEW;
 GMAT SatVIEW.SolverIterations = Current;
-GMAT SatVIEW.UpperLeft = [ 0.4980314960629921 0.3302083333333333 ];
-GMAT SatVIEW.Size = [ 0.4986876640419948 0.33125 ];
-GMAT SatVIEW.RelativeZOrder = 301;
+GMAT SatVIEW.UpperLeft = [ 0.4270588235294118 0.3181818181818182 ];
+GMAT SatVIEW.Size = [ 0.4282352941176471 0.3204545454545454 ];
+GMAT SatVIEW.RelativeZOrder = 101;
 GMAT SatVIEW.Maximized = false;
 GMAT SatVIEW.Add = {JAS_2__FO_29_, Earth, Sun, Mars, Luna, Jupiter, Mercury, Neptune, Pluto, Saturn, SolarSystemBarycenter, Uranus, Venus};
 GMAT SatVIEW.CoordinateSystem = BodyFrameReferenceSystem;
@@ -424,8 +426,8 @@ GMAT SatVIEW.EnableConstellations = On;
 Create GroundTrackPlot EarthGroundTrack;
 GMAT EarthGroundTrack.SolverIterations = Current;
 GMAT EarthGroundTrack.UpperLeft = [ 0 0 ];
-GMAT EarthGroundTrack.Size = [ 0.4986876640419948 0.4979166666666667 ];
-GMAT EarthGroundTrack.RelativeZOrder = 393;
+GMAT EarthGroundTrack.Size = [ 0.4282352941176471 0.4806818181818182 ];
+GMAT EarthGroundTrack.RelativeZOrder = 145;
 GMAT EarthGroundTrack.Maximized = false;
 GMAT EarthGroundTrack.Add = {DL0FHA, IO91OF, JAS_2__FO_29_, JJ2YPK, PI9CAM, PI9ESA, TobiGS, ZR6AIC};
 GMAT EarthGroundTrack.DataCollectFrequency = 1;
@@ -714,9 +716,9 @@ GMAT EphemerisFile_JAS_2__FO_29_.WriteEphemeris = true;
 
 Create XYPlot ElevationPlot;
 GMAT ElevationPlot.SolverIterations = Current;
-GMAT ElevationPlot.UpperLeft = [ 0 0.4979166666666667 ];
-GMAT ElevationPlot.Size = [ 0.4986876640419948 0.4979166666666667 ];
-GMAT ElevationPlot.RelativeZOrder = 341;
+GMAT ElevationPlot.UpperLeft = [ 0 0.4795454545454546 ];
+GMAT ElevationPlot.Size = [ 0.4282352941176471 0.4806818181818182 ];
+GMAT ElevationPlot.RelativeZOrder = 121;
 GMAT ElevationPlot.Maximized = false;
 GMAT ElevationPlot.XVariable = JAS_2__FO_29_.ElapsedSecs;
 GMAT ElevationPlot.YVariables = {El(1), El(2), El(3), El(4), El(5), El(6), El(7)};
@@ -725,9 +727,9 @@ GMAT ElevationPlot.ShowPlot = true;
 
 Create XYPlot DownLinkPlot;
 GMAT DownLinkPlot.SolverIterations = Current;
-GMAT DownLinkPlot.UpperLeft = [ 0.4986876640419948 0.4979166666666667 ];
-GMAT DownLinkPlot.Size = [ 0.4986876640419948 0.4979166666666667 ];
-GMAT DownLinkPlot.RelativeZOrder = 333;
+GMAT DownLinkPlot.UpperLeft = [ 0.4276470588235294 0.4795454545454546 ];
+GMAT DownLinkPlot.Size = [ 0.4282352941176471 0.4806818181818182 ];
+GMAT DownLinkPlot.RelativeZOrder = 116;
 GMAT DownLinkPlot.Maximized = false;
 GMAT DownLinkPlot.XVariable = JAS_2__FO_29_.UTCModJulian;
 GMAT DownLinkPlot.YVariables = {DNLFreq(1), DNLFreq(2), DNLFreq(3), DNLFreq(4), DNLFreq(5), DNLFreq(6), DNLFreq(7), CenterFreqDown};
@@ -736,9 +738,9 @@ GMAT DownLinkPlot.ShowPlot = true;
 
 Create XYPlot UpLinkPlot;
 GMAT UpLinkPlot.SolverIterations = Current;
-GMAT UpLinkPlot.UpperLeft = [ 0.4986876640419948 0 ];
-GMAT UpLinkPlot.Size = [ 0.4986876640419948 0.4979166666666667 ];
-GMAT UpLinkPlot.RelativeZOrder = 319;
+GMAT UpLinkPlot.UpperLeft = [ 0.4276470588235294 0 ];
+GMAT UpLinkPlot.Size = [ 0.4282352941176471 0.4806818181818182 ];
+GMAT UpLinkPlot.RelativeZOrder = 149;
 GMAT UpLinkPlot.Maximized = false;
 GMAT UpLinkPlot.XVariable = JAS_2__FO_29_.UTCModJulian;
 GMAT UpLinkPlot.YVariables = {UPLFreq(1), UPLFreq(2), UPLFreq(3), UPLFreq(4), UPLFreq(5), UPLFreq(6), UPLFreq(7), CenterFreqUp};
@@ -750,7 +752,7 @@ GMAT UpLinkPlot.ShowPlot = true;
 %----------------------------------------
 
 Create GmatFunction DCFRAZEL;
-GMAT DCFRAZEL.FunctionPath = 'C:\Users\compass-user\AppData\Local\GMAT\R2018a\bin\..\userfunctions\gmat\DCFRAZEL.gmf';
+GMAT DCFRAZEL.FunctionPath = 'C:\Users\sacha\Documents\DCFRAZEL.gmf';
 
 %----------------------------------------
 %---------- Arrays, Variables, Strings
@@ -781,9 +783,9 @@ GMAT A_Input_ICFrqUp = 145.9;     %This is the center frequency of the satellite
 GMAT A_Input_FrqOffset = 0;     %In case there is any offset in MHz
 GMAT A_ShowViews = 0; %This parameter defines if all the views are drawn or not during simulation --> 0 means don't plot
 GMAT A_ShowPlots = 0; %This parameter defines if all the XY-Plots are polotted or not during simulation --> 0 means don't plot
-GMAT A_ShowGroundTracks = 0; %This parameter defines if all the Groundtrack-Plots are polotted or not during simulation --> 0 means don't plot
-GMAT A_SpecialEventStart = 28479.22611060387; % in UTC ModJulian
-GMAT A_SpecialEventStop = 28479.24046245569;  % in UTC ModJulian
+GMAT A_ShowGroundTracks = 1; %This parameter defines if all the Groundtrack-Plots are polotted or not during simulation --> 0 means don't plot
+GMAT A_SpecialEventStart = 28477.2293793379; % in UTC ModJulian
+GMAT A_SpecialEventStop = 28477.2436038738;  % in UTC ModJulian
 GMAT Indx1 = 0;
 GMAT CenterFreqDown = 0;
 GMAT CenterFreqUp = 0;
@@ -802,6 +804,8 @@ GMAT GS_JJ2YPK = '--  JJ2YPK Spacecraft Pass Prediction Report --';
 GMAT GS_TobiGS = '--  TobiGS Spacecraft Pass Prediction Report --';
 GMAT GS_ZR6AIC = '--  ZR6AIC Spacecraft Pass Prediction Report --';
 GMAT GS_PI9CAM = '--  PI9CAM Spacecraft Pass Prediction Report --';
+
+
 
 
 
@@ -941,7 +945,7 @@ While JAS_2__FO_29_.ElapsedDays <= A_Input_SimDuration
    
    BeginScript 'ReportingScript'
       %At this time it is not possible to use string variables to name reports programatically, so no for loop can be used :-(
-      Report TrackingFile_DL0FHA_JAS_2__FO_29_ JAS_2__FO_29_.UTCGregorian JAS_2__FO_29_.UTCModJulian Ra(1) UPLFreq(1) DNLFreq(1) El(2) Az(1);
+      Report TrackingFile_DL0FHA_JAS_2__FO_29_ JAS_2__FO_29_.UTCGregorian JAS_2__FO_29_.UTCModJulian Ra(1) UPLFreq(1) DNLFreq(1) El(1) Az(1);
       Report TrackingFile_PI9ESA_JAS_2__FO_29_ JAS_2__FO_29_.UTCGregorian JAS_2__FO_29_.UTCModJulian Ra(2) UPLFreq(2) DNLFreq(2) El(2) Az(2);
       Report TrackingFile_IO91OF_JAS_2__FO_29_ JAS_2__FO_29_.UTCGregorian JAS_2__FO_29_.UTCModJulian Ra(3) UPLFreq(3) DNLFreq(3) El(3) Az(3);
       Report TrackingFile_JJ2YPK_JAS_2__FO_29_ JAS_2__FO_29_.UTCGregorian JAS_2__FO_29_.UTCModJulian Ra(4) UPLFreq(4) DNLFreq(4) El(4) Az(4);
